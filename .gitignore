@@ -1,6 +1,9 @@
-# Build output: made by build.sh, package.sh and release.sh
+# Build output: made by build.sh, package.sh and release.sh.
+# The ready-made installers in dist/ are kept in the repository so people can download them directly.
 build/
-dist/
+dist/*
+!dist/Scribblio.dmg
+!dist/Scribblio.pkg
 
 # macOS
 .DS_Store

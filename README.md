@@ -21,7 +21,7 @@ Pick whichever way you like. They all put the same Scribblio in your Application
 | [C. Install the .dmg or .pkg from Terminal](#c-install-the-dmg-or-pkg-from-terminal) | Yes | `Scribblio.dmg` or `Scribblio.pkg` |
 | [D. Build from source](#d-build-from-source) | Yes | The source code from this repository |
 
-**Where to get the installers:** download `Scribblio.dmg` or `Scribblio.pkg` from the [latest release](https://github.com/FadyWaheed11/Scribblio/releases/latest). If there is no release yet, or you want to build them yourself, follow [Make the installers](#make-the-installers).
+**Where to get the installers:** they are in the [`dist`](dist) folder of this repository ([Scribblio.dmg](https://github.com/FadyWaheed11/Scribblio/raw/main/dist/Scribblio.dmg), [Scribblio.pkg](https://github.com/FadyWaheed11/Scribblio/raw/main/dist/Scribblio.pkg)) and attached to the [latest release](https://github.com/FadyWaheed11/Scribblio/releases/latest). To build them yourself, follow [Make the installers](#make-the-installers).
 
 ### A. Disk image (.dmg)
 
