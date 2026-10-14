@@ -19,9 +19,9 @@ Pick whichever way you like. They all put the same Scribblio in your Application
 | [A. Disk image](#a-disk-image-dmg) | No | `Scribblio.dmg` |
 | [B. Installer package](#b-installer-package-pkg) | No | `Scribblio.pkg` |
 | [C. Install the .dmg or .pkg from Terminal](#c-install-the-dmg-or-pkg-from-terminal) | Yes | `Scribblio.dmg` or `Scribblio.pkg` |
-| [D. Build from source](#d-build-from-source) | Yes | This project folder |
+| [D. Build from source](#d-build-from-source) | Yes | The source code from this repository |
 
-The `.dmg` and `.pkg` files are made with `zsh package.sh`, see [Make the installers](#make-the-installers).
+**Where to get the installers:** download `Scribblio.dmg` or `Scribblio.pkg` from the [latest release](https://github.com/FadyWaheed11/Scribblio/releases/latest). If there is no release yet, or you want to build them yourself, follow [Make the installers](#make-the-installers).
 
 ### A. Disk image (.dmg)
 
@@ -82,13 +82,14 @@ Scribblio builds from source in a couple of minutes. It needs no Xcode project, 
    xcode-select --install
    ```
 
-2. **Go into the project folder.** Download the project (unzip it if it is a zip) and put it somewhere easy, for example on your Desktop. Then:
+2. **Get the source code** and go into its folder. With git:
 
    ```bash
-   cd ~/Desktop/Scribblio
+   git clone https://github.com/FadyWaheed11/Scribblio.git
+   cd Scribblio
    ```
 
-   Use your real folder name and location. Tip: type `cd ` and drag the folder from Finder into the Terminal window.
+   Without git: on the [repository page](https://github.com/FadyWaheed11/Scribblio) click **Code > Download ZIP**, double-click the zip to unzip it, then in Terminal type `cd ` (with a space) and drag the unzipped folder from Finder into the Terminal window and press Return.
 
 3. **Build the app.** When it prints `built build/Scribblio.app`, it is ready.
 
@@ -154,9 +155,10 @@ To make Scribblio open with no Gatekeeper warning at all, it has to be signed wi
 Quit Scribblio first (⌘Q; it reminds you to save unsaved notes). Then install the new version the same way you installed it:
 
 - **Disk image or installer package (A, B, C):** install the new `Scribblio.dmg` or `Scribblio.pkg` again. With the disk image, choose **Replace** when Finder asks.
-- **Built from source (D):** in the project folder run:
+- **Built from source (D):** in the project folder, get the latest code and build again (if you downloaded a zip instead of using git, download the new zip and use its folder instead of `git pull`):
 
   ```bash
+  git pull
   zsh build.sh
   rm -rf /Applications/Scribblio.app
   cp -R build/Scribblio.app /Applications/
@@ -168,7 +170,11 @@ Your notes and settings are kept.
 
 ## Uninstall
 
-Quit Scribblio, then drag **Scribblio.app** from Applications to the Trash and empty the Trash. If Finder asks for your Mac password, enter it: an app installed with an older installer package belongs to the system, and macOS protects it. Installers made by the current `package.sh` give the app to you, so no password is needed. To also remove its settings (recent notes list, note size):
+Quit Scribblio (⌘Q). Open **Finder**, press **⇧⌘A** to go to **Applications**, drag **Scribblio** to the **Trash** and empty the Trash. If Finder asks for your Mac password, enter it.
+
+Delete it from Finder: Launchpad, the Apps screen, Spotlight and the Dock can't uninstall apps that don't come from the App Store, and dragging Scribblio's Dock icon only removes it from the Dock.
+
+To also remove its settings (recent notes list, note size):
 
 ```bash
 defaults delete com.fadywaheed.scribblio
@@ -180,7 +186,7 @@ If you installed with the installer package, you can also remove its install rec
 sudo pkgutil --forget com.fadywaheed.scribblio.pkg
 ```
 
-Your saved notes stay in your Documents folder until you delete them yourself.
+Your saved notes are not removed; they stay wherever you saved them until you delete them yourself.
 
 ## Using Scribblio
 
@@ -206,7 +212,7 @@ Your saved notes stay in your Documents folder until you delete them yourself.
 ### Notes and files
 
 - ⌘N drops another sheet, so you can keep many notes on the desktop. Click a note to bring it to the top; the quill always writes on the top one. Notes stack and cast shadows on each other.
-- ⌘S saves the note as a `.scribblio` file. The save window starts in the folder you used last. Older `.quillnote` files open too.
+- ⌘S saves the note as a `.scribblio` file, wherever you choose. The save window starts in the folder you used last.
 - ⌘O opens notes, several at once if you like, and **File > Open Recent** lists the latest ones. Double-clicking a note in Finder opens it as well. When a note opens, the quill writes it out again.
 - The note's size is saved with it, and new notes start at the last size you picked.
 - ⌘W closes the top note and asks to save if needed.
