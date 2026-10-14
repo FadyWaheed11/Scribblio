@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key><string>com.fadywaheed.scribblio</string>
+    <key>CFBundleName</key><string>Scribblio</string>
+    <key>CFBundleDisplayName</key><string>Scribblio</string>
+    <key>CFBundleDevelopmentRegion</key><string>en</string>
+    <key>CFBundleLocalizations</key><array><string>en</string><string>ar</string></array>
+    <key>CFBundleExecutable</key><string>Scribblio</string>
+    <key>CFBundlePackageType</key><string>APPL</string>
+    <key>CFBundleShortVersionString</key><string>0.2</string>
+    <key>CFBundleVersion</key><string>2</string>
+    <key>LSMinimumSystemVersion</key><string>14.0</string>
+    <key>CFBundleIconFile</key><string>AppIcon</string>
+    <key>NSHighResolutionCapable</key><true/>
+    <key>UTExportedTypeDeclarations</key>
+    <array>
+        <dict>
+            <key>UTTypeIdentifier</key><string>com.fadywaheed.scribblio.note</string>
+            <key>UTTypeDescription</key><string>Scribblio Note</string>
+            <key>UTTypeConformsTo</key><array><string>public.data</string><string>public.content</string></array>
+            <key>UTTypeTagSpecification</key>
+            <dict>
+                <key>public.filename-extension</key><array><string>scribblio</string><string>quillnote</string></array>
+            </dict>
+        </dict>
+    </array>
+    <key>CFBundleDocumentTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeName</key><string>Scribblio Note</string>
+            <key>CFBundleTypeRole</key><string>Editor</string>
+            <key>LSHandlerRank</key><string>Owner</string>
+            <key>LSItemContentTypes</key><array><string>com.fadywaheed.scribblio.note</string></array>
+        </dict>
+    </array>
+</dict>
+</plist>

@@ -1,0 +1,41 @@
+/* القوائم */
+"Hide Scribblio" = "إخفاء سكريبليو";
+"Quit Scribblio" = "إنهاء سكريبليو";
+"File" = "ملف";
+"Edit" = "تحرير";
+"New Note" = "ملاحظة جديدة";
+"Open…" = "فتح…";
+"Open Note…" = "فتح ملاحظة…";
+"Open Recent" = "فتح الأخيرة";
+"No Saved Notes Yet" = "لا توجد ملاحظات محفوظة بعد";
+"Clear Menu" = "مسح القائمة";
+"Close Note" = "إغلاق الملاحظة";
+"Save" = "حفظ";
+"Save As…" = "حفظ باسم…";
+"Undo" = "تراجع";
+"Redo" = "إعادة";
+"Cut" = "قص";
+"Copy" = "نسخ";
+"Paste" = "لصق";
+"Select All" = "تحديد الكل";
+"Clear the Page" = "مسح الصفحة";
+"Drop Again" = "إسقاط الورقة من جديد";
+"Center" = "توسيط";
+
+/* الملاحظات والملفات */
+"Untitled Note" = "ملاحظة بلا عنوان";
+"Save the note so you can open it again later" = "احفظ الملاحظة لتتمكن من فتحها لاحقًا";
+"Choose one or more notes to open" = "اختر ملاحظة أو أكثر لفتحها";
+"“%@” can’t be opened" = "تعذّر فتح «%@»";
+"It isn’t a Scribblio note or it is damaged." = "هذا الملف ليس ملاحظة من سكريبليو أو أنه تالف.";
+
+/* التنبيهات */
+"Save changes to “%@”?" = "هل تريد حفظ التغييرات في «%@»؟";
+"Your changes will be lost if you don’t save them." = "ستضيع تغييراتك إذا لم تحفظها.";
+"Don’t Save" = "عدم الحفظ";
+"Cancel" = "إلغاء";
+"You have an unsaved note." = "لديك ملاحظة غير محفوظة.";
+"You have %d unsaved notes." = "لديك ملاحظات غير محفوظة: %d";
+"If you quit now, the unsaved writing will be lost." = "إذا أنهيت الآن فستضيع الكتابة غير المحفوظة.";
+"Quit Anyway" = "إنهاء على أي حال";
+
